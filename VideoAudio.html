@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multimedia Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+        }
+        video, audio {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Multimedia Page</h1>
+
+        <!-- Video Player -->
+        <h2>Watch this Video</h2>
+        <video controls>
+            <source src="path-to-your-video.mp4" type="video/mp4">
+            <source src="path-to-your-video.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Audio Player -->
+        <h2>Listen to this Audio</h2>
+        <audio controls>
+            <source src="path-to-your-audio.mp3" type="audio/mpeg">
+            <source src="path-to-your-audio.ogg" type="audio/ogg">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
+</body>
+</html>
