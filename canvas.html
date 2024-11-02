@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+      canvas {
+        border: 1px solid #000;
+        cursor: crosshair;
+      }
+      .controls {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="controls">
+      <button id="clearbtn">Clear Canvas</button>
+    </div>
+    <canvas id="drawingCanvas" width="800" height="600"></canvas>
+    <script>
+      const canvas = document.getElementById("drawingCanvas");
+      const ctx = canvas.getContext("2d");
+      let drawing = false;
+      canvas.addEventListener("mousedown", (e) => {
+        drawing = true;
+        ctx.beginPath();
+        ctx.moveTo(e.offsetX, e.offsetY);
+      });
+      canvas.addEventListener("mousemove", (e) => {
+        if (!drawing) return;
+        ctx.lineTo(e.offsetX, e.offsetY);
+        ctx.stroke();
+      });
+      canvas.addEventListener("mouseup", () => {
+        drawing = false;
+        ctx.closePath();
+      });
+      document.getElementById("clearbtn").addEventListener("click", () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      });
+      ctx.strokeStyle = "#000";
+      ctx.lineWidth = 5;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      header {
+        padding: 20px;
+        text-align: center;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+        flex: 1;
+      }
+      .box {
+        background: #ff6347;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        transition: transform 1s, background 1s;
+      }
+      .box:hover {
+        transform: scale(0.5);
+        background: #333;
+      }
+      .animated-box {
+        width: 100px;
+        height: 100px;
+        background-color: #ff6347;
+        margin: 0 auto;
+        animation: bounce 2s infinite;
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Advanced CSS Web Page</h1>
+    </header>
+    <div class="container">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+      <div class="box">Box 4</div>
+      <div class="box">Box 5</div>
+      <div class="box">Box 6</div>
+    </div>
+    <div class="animated-box"></div>
+  </body>
+</html>

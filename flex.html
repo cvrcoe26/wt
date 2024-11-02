@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Flexbox Layout</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      header {
+        background: green;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+      .main {
+        display: flex;
+        flex: 1;
+        padding: 15px;
+        flex-wrap: wrap;
+      }
+      .sidebar {
+        flex: 1;
+        min-width: 250px;
+        background: #f4f4f4;
+        padding: 15px;
+        margin: 5px;
+      }
+      .content {
+        flex: 3;
+        background: #fff;
+        padding: 15px;
+        margin: 5px;
+      }
+      footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header><h1>Responsive Flexbox Layout</h1></header>
+      <div class="main">
+        <div class="sidebar">
+          <h2>Sidebar</h2>
+          <p>This is the sidebar content.</p>
+        </div>
+        <div class="content">
+          <h2>Main Content</h2>
+          <p>This is the main content area.</p>
+        </div>
+      </div>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>

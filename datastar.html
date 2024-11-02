@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        text-align: center;
+      }
+      .btn {
+        padding: 10px 15px;
+        margin: 5px;
+        cursor: pointer;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+      }
+      #display {
+        margin-top: 20px;
+        font-size: 24px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dynamic Content Display</h1>
+    <div>
+      <button class="btn" data-content="Hello from box 1">box 1</button>
+      <button class="btn" data-content="Hello from box 2">box 2</button>
+      <button class="btn" data-content="Hello from box 3">box 3</button>
+    </div>
+    <div id="display">Click a button to see the content here.</div>
+
+    <script>
+      const buttons = document.querySelectorAll(".btn");
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const content = button.getAttribute("data-content");
+          document.getElementById("display").textContent = content;
+        });
+      });
+    </script>
+  </body>
+</html>

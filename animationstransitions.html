@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #f0f0f0;
+      }
+      .card {
+        background-color: white;
+        border: 2px solid #4caf50;
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+      .btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: #268329;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        transition: all 0.3s;
+        animation: bounce 1s infinite;
+      }
+      .btn:hover {
+        background-color: #1cc225;
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello CVR</h1>
+    <div class="card">
+      <h2>CVR college</h2>
+      <p>
+        CVR College of Engineering is accredited by NAAC with 'A' Grade from
+        2016 to 2021 (in the process of renewal). The college is also accredited
+        by NBA (National Board of Accreditation) in
+      </p>
+    </div>
+    <button class="btn">Hover Me!</button>
+  </body>
+</html>

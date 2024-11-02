@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .container {
+        text-align: center;
+      }
+      #taskinp {
+        padding: 10px;
+        width: 300px;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 10px 15px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 10px;
+      }
+      li {
+        background: lightblue;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .completed {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-Do List</h1>
+      <input type="text" id="taskinp" placeholder="Add a new task" />
+      <button id="btn">Add Task</button>
+      <ul id="taskList"></ul>
+    </div>
+    <script>
+      document.getElementById("btn").onclick = () => {
+        const taskText = document.getElementById("taskinp").value.trim();
+        if (taskText) {
+          const listItem = document.createElement("li");
+          listItem.innerHTML = `
+                    <input type="checkbox" onclick="this.parentNode.classList.toggle('completed')">
+                    ${taskText}
+                    <button onclick="this.parentNode.remove()">Remove</button>
+                `;
+          document.getElementById("taskList").appendChild(listItem);
+          document.getElementById("taskInput").value = "";
+        } else {
+          alert("Please enter a task.");
+        }
+      };
+    </script>
+  </body>
+</html>

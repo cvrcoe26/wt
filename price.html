@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .pricing-table {
+        display: flex;
+        gap: 20px;
+      }
+      .card {
+        background-color: white;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        width: 200px;
+      }
+      .card.selected {
+        border-color: green;
+        box-shadow: 0 0 10px lightgreen;
+      }
+      .price {
+        font-size: 24px;
+        font-weight: bold;
+        color: #4caf50;
+      }
+      .button {
+        margin-top: 10px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pricing-table">
+      <div class="card" tabindex="0">
+        <h2>Basic</h2>
+        <div class="price">$10/month</div>
+        <p>Basic features for individual users.</p>
+        <button class="button">Select</button>
+      </div>
+      <div class="card" tabindex="0">
+        <h2>Pro</h2>
+        <div class="price">$20/month</div>
+        <p>Advanced features for professionals.</p>
+        <button class="button">Select</button>
+      </div>
+      <div class="card" tabindex="0">
+        <h2>Enterprise</h2>
+        <div class="price">$30/month</div>
+        <p>Comprehensive features for teams.</p>
+        <button class="button">Select</button>
+      </div>
+    </div>
+
+    <script>
+      const cards = document.querySelectorAll(".card");
+
+      cards.forEach((card) => {
+        card.addEventListener("click", () => {
+          cards.forEach((c) => c.classList.remove("selected"));
+          card.classList.add("selected");
+        });
+      });
+    </script>
+  </body>
+</html>
