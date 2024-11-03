@@ -1,0 +1,129 @@
+<!-- pages: registration, login, profile, payment
+make seperate html files for each page and change the data -->
+
+<!---------------------- registration.html ----------------------->
+<html>
+<body>
+    <h2>Registration</h2>
+    <form onsubmit="return validateRegistration()">
+        <input type="text" id="username" placeholder="Username"><br><br>
+        <input type="email" id="email" placeholder="Email"><br><br>
+        <input type="password" id="password" placeholder="Password"><br><br>
+        <button type="submit">Register</button>
+    </form>
+    <script>
+        function validateRegistration() {
+            const username = document.getElementById("username").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (!username || !email || !password) {
+                alert("Please fill all fields.");
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
+
+ <!-- ------------------- login.html ----------------------------->
+
+ <html>
+<body>
+    <h2>Login</h2>
+    <form onsubmit="return validateLogin()">
+        <input type="text" id="loginUsername" placeholder="Username"><br><br>
+        <input type="password" id="loginPassword" placeholder="Password"><br><br>
+        <button type="submit">Login</button>
+    </form>
+    <script>
+        function validateLogin() {
+            const username = document.getElementById("loginUsername").value;
+            const password = document.getElementById("loginPassword").value;
+
+            if (!username || !password) {
+                alert("Please enter both username and password.");
+                return false;
+            }
+            if (username !== "cvr" || password !== "cvr") {
+                alert("Please enter correct username and password.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
+
+ <!-- ------------------- profile.html ----------------------------->
+
+ <html>
+    <body>
+        <h2>User Profile</h2>
+        <form onsubmit="return validateProfile()">
+            <input type="text" id="firstName" placeholder="First Name"><br><br>
+            <input type="text" id="lastName" placeholder="Last Name"><br><br>
+            <input type="text" id="phoneNumber" placeholder="Phone Number"><br><br>
+            <input type="email" id="profileEmail" placeholder="Email"><br><br>
+            <button type="submit">Save</button>
+        </form>
+    
+        <script>
+            function validateProfile() {
+                const firstName = document.getElementById("firstName").value;
+                const lastName = document.getElementById("lastName").value;
+                const phoneNumber = document.getElementById("phoneNumber").value;
+                const email = document.getElementById("profileEmail").value;
+    
+                if (!firstName || !lastName || !phoneNumber || !email) {
+                    alert("Please fill all fields.");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </body>
+    </html>
+
+ <!-- ------------------- payment.html ----------------------------->
+ 
+ <html>
+ <body>
+     <h2>Payment</h2>
+     <form onsubmit="return validatePayment()">
+         <input type="text" id="cardNumber" placeholder="Card Number"><br><br>
+         <input type="text" id="expiryDate" placeholder="Expiry Date (MM/YY)"><br><br>
+         <input type="text" id="cvv" placeholder="CVV"><br><br>
+         <input type="text" id="cardName" placeholder="Name on Card"><br><br>
+         <button type="submit">Pay Now</button>
+     </form>
+     <script>
+         function validatePayment() {
+             const cardNumber = document.getElementById("cardNumber").value;
+             const expiryDate = document.getElementById("expiryDate").value;
+             const cvv = document.getElementById("cvv").value;
+             const cardName = document.getElementById("cardName").value;
+ 
+             if (!cardNumber || !expiryDate || !cvv || !cardName) {
+                 alert("Please fill all fields.");
+                 return false;
+             }
+ 
+             if (cardNumber.length !== 16 || cvv.length !== 3) {
+                 alert("please enter correct details");
+                 return false;
+             }
+ 
+             return true;
+         }
+     </script>
+ </body>
+ 
+ </html>

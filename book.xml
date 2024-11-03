@@ -1,0 +1,30 @@
+<!-- change the data or use some random data -->
+<!-- paste the code in the below url and validate -->
+<!-- https://www.liquid-technologies.com/online-xml-validator -->
+
+<library>
+    <book>
+        <title>Title1</title>
+        <author>Author1</author>
+        <isbn>ISBN1</isbn>
+        <publisher>Publisher1</publisher>
+        <edition>Edition1</edition>
+        <price>Price1</price>
+    </book>
+    <book>
+        <title>Title2</title>
+        <author>Author2</author>
+        <isbn>ISBN2</isbn>
+        <publisher>Publisher2</publisher>
+        <edition>Edition2</edition>
+        <price>Price2</price>
+    </book>
+    <book>
+        <title>Title3</title>
+        <author>Author3</author>
+        <isbn>ISBN3</isbn>
+        <publisher>Publisher3</publisher>
+        <edition>Edition3</edition>
+        <price>Price3</price>
+    </book>
+</library>

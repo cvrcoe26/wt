@@ -1,0 +1,58 @@
+<!-- DTD -->
+<!DOCTYPE library [
+    <!ELEMENT library (book+)>
+    <!ELEMENT book (title, author, isbn, publisher, edition, price)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT author (#PCDATA)>
+    <!ELEMENT isbn (#PCDATA)>
+    <!ELEMENT publisher (#PCDATA)>
+    <!ELEMENT edition (#PCDATA)>
+    <!ELEMENT price (#PCDATA)>
+]>
+
+<!-- paste the xsd and xml in the below url to validate -->
+<!-- https://www.liquid-technologies.com/online-xsd-validator -->
+
+<!-- XML schema definition (xsd) -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="library">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="book" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title" type="xs:string"/>
+                            <xs:element name="author" type="xs:string"/>
+                            <xs:element name="isbn" type="xs:string"/>
+                            <xs:element name="publisher" type="xs:string"/>
+                            <xs:element name="edition" type="xs:string"/>
+                            <xs:element name="price" type="xs:decimal"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+<!-- xml data -->
+<library>
+    <book>
+        <title>Title1</title>
+        <author>Author1</author>
+        <isbn>ISBN1</isbn>
+        <publisher>Publisher1</publisher>
+        <edition>Edition1</edition>
+        <price>Price1</price>
+    </book>
+    <book>
+        <title>Title2</title>
+        <author>Author2</author>
+        <isbn>ISBN2</isbn>
+        <publisher>Publisher2</publisher>
+        <edition>Edition2</edition>
+        <price>Price2</price>
+    </book>
+</library>
