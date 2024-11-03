@@ -1,0 +1,67 @@
+<html>
+<body>
+    <div>
+        <h1>Hello</h1>
+        <h2>Display Date</h2>
+        <button onclick="displayDate()">Display Date</button>
+        <input type="text" id="dateInput" placeholder="Date will appear here" readonly>
+        <h2>Factorial Calculation</h2>
+        <button onclick="calculateFactorial()">Calculate Factorial</button>
+        <h2>Multiplication Table</h2>
+        <button onclick="multiplicationTable()">Show Multiplication Table</button>
+        <h2>Sum of Numbers</h2>
+        <button onclick="sumOfNumbers()">Calculate Sum</button>
+    </div>
+    <script>
+        function displayDate() {
+            const currentDate = new Date();
+            document.getElementById('dateInput').value = currentDate.toLocaleString();
+        }
+        function calculateFactorial() {
+            const n = prompt("Enter a number to calculate its factorial:");
+            if (n !== null) {
+                const number = parseInt(n);
+                if (isNaN(number) || number < 0) {
+                    alert("Please enter a valid non-negative integer.");
+                    return;
+                }
+                let factorial = 1;
+                for (let i = 1; i <= number; i++) {
+                    factorial *= i;
+                }
+                alert("The factorial of " + number + " is " + factorial);
+            }
+        }
+        function multiplicationTable() {
+            const n = prompt("Enter a number to show its multiplication table:");
+            const number = parseInt(n);
+            let table = "";
+            for (let i = 1; i <= 10; i++) {
+                table += number + " x " + i + " = " + (number * i) + "\n";
+            }
+            alert("Multiplication Table for " + number + ":\n" + table);
+        }
+        function sumOfNumbers() {
+            const n = prompt("Enter a number:");
+            const number = parseInt(n);
+            const addAnother = confirm("Do you want to add another number?");
+            let sum = number;
+            if (addAnother) {
+                const additionalNumber = prompt("Enter another number to add:");
+                if (additionalNumber !== null) {
+                    const additional = parseInt(additionalNumber);
+                    if (!isNaN(additional)) {
+                        sum += additional;
+                    } else {
+                        alert("Please enter a valid number.");
+                    }
+                }
+            }
+            alert("The sum is " + sum);
+
+        }
+    </script>
+
+</body>
+
+</html>

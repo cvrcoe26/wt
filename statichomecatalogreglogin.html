@@ -1,0 +1,260 @@
+<!-- pages: index.html, catalog.html, registration.html, login.html -->
+<!-- replace images and change colors,change data and add stylings -->
+
+<!-- index.html -->
+
+<html>
+  <style>
+    body {
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      font-size: 30px;
+      color: whitesmoke;
+    }
+  </style>
+
+  <body>
+    <nav style="background-color: rgb(68, 6, 6)">
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <div style="display: flex; gap: 25px">
+          <a href="./index.html">Home</a>
+          <a href="./catalog.html">Catalog</a>
+          <a href="./registration.html">Registration</a>
+          <a href="./login.html">Login</a>
+        </div>
+      </div>
+    </nav>
+    <div>
+      <h1 style="text-align: center; text-decoration: underline">
+        CVR-bookstore
+      </h1>
+    </div>
+    <div style="width: 100vw; display: flex; justify-content: center">
+      <div
+        style="
+          display: flex;
+          /* align-items: center; */
+          justify-content: center;
+          margin: 40px;
+          width: 70%;
+          gap: 20px;
+        "
+      >
+        <img src="harrypotter.jpg" width="300" height="300" />
+        <p style="font-size: 25px">
+          J.K. Rowling is the author of the enduringly popular Harry Potter
+          books. After the idea for Harry Potter came to her on a delayed train
+          journey in 1990, she plotted out and started writing the series of
+          seven books and the first, Harry Potter and the Philosopher's Stone,
+          was published in the UK in 1997. 
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+<!-- catalog.html -->
+
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        font-size: 20px;
+      }
+      a {
+        text-decoration: none;
+        font-size: 30px;
+        color: whitesmoke;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+      }
+      table {
+        border: 2px solid red;
+        font-size: 30px;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <nav style="background-color: rgb(68, 6, 6)">
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <div style="display: flex; gap: 25px">
+          <a href="./index.html">Home</a>
+          <a href="./catalog.html">Catalog</a>
+          <a href="./registration.html">Registration</a>
+          <a href="./login.html">Login</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div>
+        <h1 style="text-align: center">CVR-bookstore</h1>
+        <table>
+          <tr>
+            <th>Book Name</th>
+            <th>Author</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Harry Potter</td>
+            <td>J.K. Rowling</td>
+            <td>Rs. 500</td>
+          </tr>
+          <tr>
+            <td>Harry Potter</td>
+            <td>J.K. Rowling</td>
+            <td>Rs. 500</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+<!-- registration.html -->
+
+<html>
+  <style>
+    body {
+      margin: 0;
+      font-size: 30px;
+    }
+    a {
+      text-decoration: none;
+      font-size: 30px;
+      color: whitesmoke;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+    }
+  </style>
+  <body>
+    <nav style="background-color: rgb(68, 6, 6)">
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <div style="display: flex; gap: 25px">
+          <a href="./index.html">Home</a>
+          <a href="./catalog.html">Catalog</a>
+          <a href="./registration.html">Registration</a>
+          <a href="./login.html">Login</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="login">
+        <p style="text-align: center">Registration</p>
+        <form>
+          <label for="email">Email</label><br />
+          <input type="email"placeholder="email" required />
+          <br />
+          <label for="username">Username</label><br />
+          <input type="text" placeholder="Username" required />
+          <br />
+          <label for="password">Password</label><br />
+          <input
+            type="password"
+            placeholder="Password"
+            required
+          />
+          <br />
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- login.html -->
+<html>
+  <style>
+    body {
+      margin: 0;
+      font-size: 30px;
+    }
+    a {
+      text-decoration: none;
+      font-size: 30px;
+      color: whitesmoke;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+    }
+  </style>
+  <body>
+    <nav style="background-color: rgb(68, 6, 6)">
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <div style="display: flex; gap: 25px">
+          <a href="./index.html">Home</a>
+          <a href="./catalog.html">Catalog</a>
+          <a href="./registration.html">Registration</a>
+          <a href="./login.html">Login</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="login">
+        <p style="text-align: center">Login</p>
+        <form>
+          <label for="username">Username</label><br />
+          <input
+            type="text"
+            placeholder="Username"
+            required
+          />
+          <br />
+          <label for="password">Password</label><br />
+          <input
+            type="password"
+            placeholder="Password"
+            required
+          />
+          <br />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
