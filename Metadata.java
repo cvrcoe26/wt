@@ -3,8 +3,14 @@ import java.sql.*;
 public class Metadata {
     public static void main(String[] args) {
         try {
+            // for mysql database
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbname", "root", "cvr123");
+            
+            // in case of oracle databse use these 
+            // Class.forName("oracle.jdbc.OracleDriver");
+            // Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "system", "cvr123");
+
             DatabaseMetaData dbMetaData = conn.getMetaData();
             System.out.println("Database Product Name: " + dbMetaData.getDatabaseProductName());
             System.out.println("Database Product Version: " + dbMetaData.getDatabaseProductVersion());

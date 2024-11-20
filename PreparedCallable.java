@@ -3,8 +3,14 @@ import java.sql.*;
 public class PreparedCallable {
     public static void main(String[] args) {
         try {
+            // for mysql database
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbname", "root", "cvr123");
+            
+            // in case of oracle databse use these 
+            // Class.forName("oracle.jdbc.OracleDriver");
+            // Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "system", "cvr123");
+            
             String insertSQL = "INSERT INTO employees (id,name) VALUES (?, ?)";
             PreparedStatement pstmt = conn.prepareStatement(insertSQL);
             pstmt.setInt(1, 1000);
